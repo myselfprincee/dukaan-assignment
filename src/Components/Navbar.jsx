@@ -1,4 +1,5 @@
 const Navbar = () => {
+
   const styles = {
     li: "flex px-2 items-center py-2 text-sm font-medium gap-3 rounded cursor-pointer w-full hover:bg-[#FFFFFF] hover:bg-opacity-10",
   };
@@ -40,7 +41,7 @@ const Navbar = () => {
         </div>
 
         <ul className="flex flex-col items-start gap-1 flex-1 my-6">
-          <li className={`${styles.li}`}>
+          <li className={styles.li}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="25"

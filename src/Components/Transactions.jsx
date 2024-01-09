@@ -2,8 +2,8 @@ import Search from "./Search";
 import { useState } from "react";
 
 const Transactions = () => {
-  const [page, setPage] = useState(1);
-  const [click, setClick] = useState(false)
+  const [page, setPage] = useState(0);
+  const [click, setClick] = useState(false);
 
   return (
     <div className="bg-[white] rounded-lg p-3 pb-6 mt-5 w-full sm:w-max">
@@ -22,8 +22,10 @@ const Transactions = () => {
             name="Last Month"
             id=""
           >
-            <option value="This Month" defaultChecked>Sort</option>
-            <option value="This Year">Last Year</option>
+            <option value="This Month" defaultChecked>
+              Sort
+            </option>
+            <option disabled value="This Year">Last Year</option>
           </select>
           <i className="rounded p-2 outline outline-[#D9D9D9]">
             <svg
@@ -48,12 +50,15 @@ const Transactions = () => {
           <tr className="justify-between rounded bg-[#F2F2F2]">
             <th className="text-left">Order ID</th>
             <th className="text-right">
-              <button onClick={()=>{
-                setClick((prev)=> !prev)
-              }} className="flex justify-center items-center w-full flex-row gap-3">
+              <button
+                onClick={() => {
+                  setClick((prev) => !prev);
+                }}
+                className="flex justify-center items-center w-full flex-row gap-3"
+              >
                 Order date
                 <svg
-                className={`${!click ? "" : "rotate-180"}`}
+                  className={`${!click ? "" : "rotate-180"}`}
                   xmlns="http://www.w3.org/2000/svg"
                   width="8"
                   height="8"
@@ -122,9 +127,12 @@ const Transactions = () => {
 
       {/* Pagination Component */}
       <span className="flex gap-6 items-center justify-center">
-        <button onClick={()=>{
-          setPage(page==1 ? page : page - 1)
-        }} className="outline rounded flex items-center gap-[.375rem] p-1.5 pr-3 outline-[#D9D9D9]">
+        <button
+          onClick={() => {
+            setPage(page === 0 ? page : page - 1);
+          }}
+          className="outline rounded flex items-center gap-[.375rem] p-1.5 pr-3 outline-[#D9D9D9]"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="18"
@@ -147,26 +155,29 @@ const Transactions = () => {
         <div className="flex gap-2">
           {Array.from({ length: 5 }, (_, index) => (
             <button
-            onClick={()=>{
-              setPage(index)
-            }}
+              onClick={() => {
+                setPage(index + 1);
+              }}
               key={index}
               className={` ${
                 page == index
-                  ?"bg-[#146EB4] text-white"
+                  ? "bg-[#146EB4] text-white"
                   : "bg-transparent text-[#4D4D4D]"
               } flex w-7 h-7 text-center items-center justify-center rounded`}
             >
-              {index}
+              {index  +1}
             </button>
           ))}
         </div>
 
         {/* -------------- */}
 
-        <button onClick={()=>{
-          setPage(page +1)
-        }} className="outline rounded flex items-center gap-[.375rem] p-1.5 pl-3 outline-[#D9D9D9]">
+        <button
+          onClick={() => {
+            setPage(page === 4 ? page : page + 1);
+          }}
+          className="outline rounded flex items-center gap-[.375rem] p-1.5 pl-3 outline-[#D9D9D9]"
+        >
           Next
           <svg
             xmlns="http://www.w3.org/2000/svg"
