@@ -1,0 +1,53 @@
+:root {
+    font-family: Inter, sans-serif;
+    font-feature-settings: 'liga' 1, 'calt' 1;
+}
+
+@supports (font-variation-settings: normal) {
+    :root {
+        font-family: InterVariable, sans-serif;
+    }
+}
+
+body {
+    background: #fafafa;
+}
+
+select {
+    appearance: none;
+    /* safari */
+    -webkit-appearance: none;
+    cursor: pointer;
+
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.93427 14.9005C3.24669 14.5881 3.75322 14.5881 4.06564 14.9005L7.46126 18.2961L10.8569 14.9005C11.1693 14.5881 11.6758 14.5881 11.9883 14.9005C12.3007 15.2129 12.3007 15.7195 11.9883 16.0319L8.02694 19.9932C7.71452 20.3056 7.20799 20.3056 6.89557 19.9932L2.93427 16.0319C2.62185 15.7195 2.62185 15.2129 2.93427 14.9005Z" fill="%234D4D4D"/><path fill-rule="evenodd" clip-rule="evenodd" d="M7.46119 3.77261C7.90302 3.77261 8.26119 4.13078 8.26119 4.57261L8.26119 19.4275C8.26119 19.8693 7.90302 20.2275 7.46119 20.2275C7.01936 20.2275 6.66119 19.8693 6.66119 19.4275L6.66119 4.57261C6.66119 4.13078 7.01936 3.77261 7.46119 3.77261Z" fill="%234D4D4D"/><path fill-rule="evenodd" clip-rule="evenodd" d="M22.0656 9.09958C21.7532 9.412 21.2467 9.412 20.9343 9.09958L17.5386 5.70396L14.143 9.09958C13.8306 9.412 13.3241 9.412 13.0117 9.09958C12.6992 8.78716 12.6992 8.28063 13.0117 7.96821L16.973 4.0069C17.2854 3.69448 17.7919 3.69448 18.1043 4.0069L22.0656 7.96821C22.3781 8.28063 22.3781 8.78716 22.0656 9.09958Z" fill="%234D4D4D"/><path fill-rule="evenodd" clip-rule="evenodd" d="M17.5387 20.2275C17.0969 20.2275 16.7387 19.8693 16.7387 19.4275L16.7387 4.57259C16.7387 4.13076 17.0969 3.77259 17.5387 3.77259C17.9805 3.77259 18.3387 4.13076 18.3387 4.57259L18.3387 19.4275C18.3387 19.8693 17.9805 20.2275 17.5387 20.2275Z" fill="%234D4D4D"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.5rem top 50%;
+    background-size: 1.4rem auto;
+
+    ;
+}
+
+.sort {
+    background-image: url('data:image/svg+xml,<svg width="50" height="50" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="Outlined / Chevron Down"><path id="Vector" fill-rule="evenodd" clip-rule="evenodd" d="M5.79289 8.29292C6.18342 7.9024 6.81658 7.9024 7.20711 8.29292L12.5 13.5858L17.7929 8.29292C18.1834 7.9024 18.8166 7.9024 19.2071 8.29292C19.5976 8.68345 19.5976 9.31661 19.2071 9.70714L13.2071 15.7071C12.8166 16.0977 12.1834 16.0977 11.7929 15.7071L5.79289 9.70714C5.40237 9.31661 5.40237 8.68345 5.79289 8.29292Z" fill="%234D4D4D"/></g></svg>');
+    background-repeat: no-repeat;
+    background-position: right 0.5rem top 50%;
+    background-size: 1rem auto;
+}
+
+/* Style for the table */
+table {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+    appearance: none;
+}
+
+/* Style for the header row */
+table thead tr {
+    background-color: #F2F2F2;
+}
+
+/* Style for all table cells */
+table th,
+table td {
+    padding: 0.7rem;
+}
